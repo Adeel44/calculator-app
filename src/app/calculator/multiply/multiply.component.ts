@@ -19,7 +19,6 @@ export class MultiplyComponent {
   
 pressNum(value: string) {
 
-  debugger
   let check = this.calcultorService.screenValue+value
 
     if(check== '/'|| check === '*' ){

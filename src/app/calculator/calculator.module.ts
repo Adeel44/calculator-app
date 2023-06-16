@@ -9,6 +9,8 @@ import { MultiplyComponent } from './multiply/multiply.component';
 import { EqualComponent } from './equal/equal.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { FormsModule } from '@angular/forms';
+import { CalculatorButtonComponent } from './buttons/calculator-button/calculator-button.component';
+import { ButtonsContainerComponent } from './buttons/buttons-container/buttons-container.component';
 
 
 console.log("cal")
@@ -21,7 +23,9 @@ console.log("cal")
     
     MultiplyComponent,
     EqualComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    CalculatorButtonComponent,
+    ButtonsContainerComponent
   ],
   imports: [
     CommonModule,

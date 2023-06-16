@@ -30,7 +30,6 @@ export class AddComponent implements OnChanges, OnInit {
   
 
   pressNum(value: any) {
-    debugger
     this.screenValue = this.calcultorService.screenValue
     const PrevKey = this.screenValue[this.screenValue.length - 1];
     if (PrevKey === '/' || PrevKey === '*' || PrevKey === '-' || PrevKey === '+' || PrevKey === '.') {

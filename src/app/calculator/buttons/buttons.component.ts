@@ -49,11 +49,14 @@ export class ButtonsComponent {
     }
   }
 
+  onButtonClick(event: any)
+  {
+    console.log(event)
+  }
 
 
   clear() {
 
-    debugger
 
     let screenValue = this.calcultorService.screenValue
     screenValue = "";

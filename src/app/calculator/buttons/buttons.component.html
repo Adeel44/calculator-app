@@ -2,7 +2,8 @@
     <!-- <div class="input" id="input" >{{screenValue}}</div> -->
 
     <div class="numbers">
-      <div (click)="pressNum('7')">7</div>
+      <!-- <div (click)="pressNum('7')">7</div> -->
+      <app-calculator-button [metadata]="{label: 7, type: 'number'}" (buttonClick)="onButtonClick($event)"></app-calculator-button>
       <div (click)="pressNum('8')">8</div>
       <div (click)="pressNum('9')">9</div>
     </div>

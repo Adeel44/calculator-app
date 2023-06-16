@@ -20,7 +20,6 @@ export class ContainerComponent {
 
   }
   childData(value:any){
-    debugger
     this.screenValue=value
 
   }
