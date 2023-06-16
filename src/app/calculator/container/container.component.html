@@ -1,0 +1,34 @@
+
+
+
+<div class="calculator">
+  
+<app-display [currentScreenValue]="screenValue"></app-display>
+ 
+  <div class="d">
+    <div class="operators">
+      <app-add (childEvent)="childData($event)"></app-add>
+     
+      
+      <app-multiply (childEvent)="childDatafMultiply($event)"></app-multiply>
+      
+    </div>
+    <app-buttons  (childEvent)="childNumData($event)"></app-buttons>
+  
+   <app-equal (childEvent)="childData($event)"></app-equal>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <h3>Cu</h3>
+
+{{curreentOpertor}} -->
+
+
