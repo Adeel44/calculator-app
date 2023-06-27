@@ -15,7 +15,8 @@
   }
 
   .calculator{
-    width: 430px;
+    /* width: 430px; */
+    width:380px;
     margin: 4% auto;
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 5px;
@@ -102,7 +103,6 @@
     border-radius: 1px;
     width:80px;
     text-align: center;
-    padding: 127px 10px;
     margin: 10px 6px 10px 0;
     vertical-align: top;
     cursor: pointer;

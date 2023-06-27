@@ -7,15 +7,47 @@
  
   <div class="d">
     <div class="operators">
-      <app-add (childEvent)="childData($event)"></app-add>
+
+      <app-add  
+      (childEvent)="childData($event)"
+
+      [metadataplus]="{label: '+', type: 'operator'}" 
+      [metadataminus]="{label: '-', type: 'operator'}"
+      [metadatamulty]="{label: '*', type: 'operator'}" 
+      [metadatadivide]="{label: '/', type: 'operator'}"
+      [metadatacalculate]="{label: '=', type: 'operator'}"
+
+
+      ></app-add>
      
       
-      <app-multiply (childEvent)="childDatafMultiply($event)"></app-multiply>
       
     </div>
-    <app-buttons  (childEvent)="childNumData($event)"></app-buttons>
+
+    <!-- (childEvent)="childNumData($event)" -->
+
+
+    <app-buttons  
+
+
+    [metadata]="{label: 4, type: 'number'}" (childEvent)="onButtonClick($event)" 
+    [metadata5]="{label: 5, type: 'number'}" 
+    [metadata6]="{label: 6, type: 'number'}" 
+    [metadata7]="{label: 7, type: 'number'}" 
+    [metadata8]="{label: 8, type: 'number'}" 
+    [metadata9]="{label: 9, type: 'number'}" 
+    [metadata0]="{label: 0, type: 'number'}" 
+    [metadata1]="{label: 1, type: 'number'}" 
+    [metadata2]="{label: 2, type: 'number'}" 
+    [metadata3]="{label: 3, type: 'number'}"
+    [metadatadot]="{label:'.', type: 'number'}"
+    [metadataclear]="{label:'C', type: 'opertor'}"
+
+    ></app-buttons>
+
+    
+    
   
-   <app-equal (childEvent)="childData($event)"></app-equal>
   </div>
 </div>
 
@@ -26,9 +58,5 @@
 
 
 
-
-<!-- <h3>Cu</h3>
-
-{{curreentOpertor}} -->
 
 

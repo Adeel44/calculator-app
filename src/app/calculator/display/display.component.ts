@@ -28,8 +28,8 @@ export class DisplayComponent implements OnInit  ,OnChanges{
    }
    ngOnInit(): void {
      // passing data from child to child through service
-      // this.calcultorService.screenValue = this.screenValue;
-      // console.log("cr"+this.screenValue)
+      this.calcultorService.screenValue = this.screenValue;
+      console.log("cr"+this.screenValue)
    }
 
 

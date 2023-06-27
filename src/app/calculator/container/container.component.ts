@@ -1,78 +1,81 @@
 import { Component } from '@angular/core';
+import { CalculatorService } from '../services/calculator.service';
 
 @Component({
   selector: 'app-container',
   templateUrl: './container.component.html',
   styleUrls: ['./container.component.css']
 })
+
 export class ContainerComponent {
 
 
-  screenValue= "";
-  curreentOpertor="";
-  
+  screenValue = "";
 
-
-  childNumData(value:any){
-   // debugger
-    this.screenValue = value;
-    console.log(value)
-
-  }
-  childData(value:any){
-    debugger
-    this.screenValue=value
-
-  }
-
-  childDatafMultiply(value:any){
- //   debugger
-    this.screenValue=value
+  constructor(public calcultorService: CalculatorService) {
 
   }
 
 
 
-
-  // screenValue:any;
-  // childNumberData:any;
-  // curreentOpertor:any;
-
-
-
-
-
-  // childProperty(value:any){
-  //  // console.log(value)
+  // childNumData(value: any) {
   //   this.screenValue = value;
-
-  //   console.log("child number is"+value)
-
-  // }
-
-  // childNumData(value:any){
-  //   //debugger
-  //   this.childNumberData = value;
   //   console.log(value)
-  //  console.log("child number is"+value)
-
-  // }
-
-  // childData(value:any){
-  //   this.curreentOpertor=value
-  //  // this.childNumberData =value
-  
-  //  // alert(value)
 
   // }
 
 
 
-  
-  
+  childData(event: any) {
+    // this.screenValue=value
+    if (event.type == 'operator') {
+      let screenValue = event.label
+      screenValue = screenValue.toString()
+      this.screenValue += screenValue;
+    }
 
 
- 
+    if (event.label == '=') {
+      debugger
+
+      this.screenValue = this.calcultorService.screenValue;
+
+      try {
+        let result = (eval(this.screenValue))
+        this.screenValue = result
+        if (result === undefined) {
+          this.screenValue = ""
+
+        }
+
+      } catch (error) {
+        alert('Invalid opertor error');
+      }
+
+    }
+
+
+
+  }
+
+
+
+  onButtonClick(event: any) {
+
+    //debugger
+    if (event.type == 'number') {
+      let screenValue = event.label
+      screenValue = screenValue.toString()
+      this.screenValue += screenValue;
+    }
+
+    if (event.label === 'C') {
+
+      this.screenValue = ""
+    }
+
+
+  }
 
 
 }
